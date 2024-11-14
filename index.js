@@ -42,7 +42,7 @@ app.get('/tasks/edit-priority', (req, res) => {
   let priority = req.query.priority;
 
   for (let i = 0; i < taskList['tasks'].length; i++) {
-    if (parseInt(taskList['tasks'][i]['taskId']) == -parseInt(taskId)) {
+    if (parseInt(taskList['tasks'][i]['taskId']) === parseInt(taskId)) {
       taskList['tasks'][i]['priority'] = parseInt(priority);
       break;
     }
